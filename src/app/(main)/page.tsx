@@ -1,12 +1,14 @@
+import Hero from "@/components/Hero";
 import Navber from "@/components/Navber";
 
 
 const page = () => {
     return (
         <>
-        <header>
-            <Navber/>
-        </header>
+            <header className="unic_background" >
+                <Navber />
+                <Hero/>
+            </header>
         </>
     );
 };
