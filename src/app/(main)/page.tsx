@@ -1,10 +1,13 @@
+import Navber from "@/components/Navber";
 
 
 const page = () => {
     return (
-        <div>
-            
-        </div>
+        <>
+        <header>
+            <Navber/>
+        </header>
+        </>
     );
 };
 
