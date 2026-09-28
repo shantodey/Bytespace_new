@@ -19,21 +19,10 @@ const Navber = () => {
     ];
 
     return (
-        <div className="w-full bg-[#0042FF] text-white font-sans antialiased">
-            <header className="relative w-full border-b border-[#1A52FF] overflow-hidden">
-                { }
-                <div className="absolute inset-0 pointer-events-none opacity-25" style={{
-                    backgroundImage: `      linear-gradient(to right, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 1px, transparent 1px)    `,
-                    backgroundSize: '80px 100%'
-                }}
-                />
-
-                { }
+        <div className="w-full text-white font-sans antialiased">
+            <header className="sticky top-0 z-50 w-full bg-[#0642DC]">
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16 sm:h-20">
-
-                        { }
                         <div className="flex items-center space-x-2 sm:space-x-3 cursor-pointer">
                             <Image src={logo} alt='logo' />
                             <span className="text-xl sm:text-2xl font-bold tracking-tight text-white">
