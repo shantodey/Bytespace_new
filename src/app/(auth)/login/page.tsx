@@ -1,9 +1,10 @@
+import { HeroShowcase } from '@/components/Showcase';
 import React from 'react';
 
 const page = () => {
     return (
         <div>
-            thsi is loging
+            <HeroShowcase/>
         </div>
     );
 };
