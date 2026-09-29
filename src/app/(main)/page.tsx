@@ -1,4 +1,5 @@
 import DiscoverYourSkills from "@/components/DiscoverYourSkills";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navber from "@/components/Navber";
 import Sponsors from "@/components/Sponsors";
@@ -15,6 +16,9 @@ const page = () => {
                 <Sponsors/>
                 <DiscoverYourSkills/>
             </main>
+            <footer>
+                <Footer/>
+            </footer>
         </>
     );
 };
