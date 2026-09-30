@@ -150,17 +150,6 @@ export default function DiscoverYourSkills() {
                                 <div className="relative w-85.25 h-48.75 rounded-2xl overflow-hidden group">
                                     <Image src={course.imageSrc} alt={course.title} fill className="object-cover transition-transform duration-300 group-hover:scale-105" />
 
-                                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-3 w-max max-w-[90%]">
-                                        <Badge variant="secondary" className="bg-white/70 backdrop-blur-md text-slate-800 text-[10px] font-normal px-2.5 py-1 rounded-full border-none shadow-none">
-                                            {course.lessons}
-                                        </Badge>
-                                        <Badge variant="secondary" className="bg-white/70 backdrop-blur-md text-slate-800 text-[10px] font-normal px-2.5 py-1 rounded-full border-none shadow-none">
-                                            {course.duration}
-                                        </Badge>
-                                        <Badge variant="secondary" className="bg-white/70 backdrop-blur-md text-slate-800 text-[10px] font-normal px-2.5 py-1 rounded-full border-none shadow-none">
-                                            {course.comments}
-                                        </Badge>
-                                    </div>
                                 </div>
 
                                 {/* Course Details */}
@@ -176,17 +165,13 @@ export default function DiscoverYourSkills() {
                                         </div>
                                     </div>
 
-                                    {/* Author */}
                                     <p className="text-xs text-slate-400 font-normal">
                                         by <span className="text-blue-600 font-medium">{course.author}</span>
                                     </p>
 
                                     {/* Level & Avatars */}
                                     <div className="flex items-center gap-3 my-1">
-                                        <Badge
-                                            variant="outline"
-                                            className="bg-slate-100 text-slate-600 border-none font-normal text-xs px-2.5 py-0.5 rounded-full flex items-center gap-1.5"
-                                        >
+                                        <Badge variant="outline" className="bg-slate-100 text-slate-600 border-none font-normal text-xs px-2.5 py-0.5 rounded-full flex items-center gap-1.5">
                                             <BarChart2 className="w-3.5 h-3.5 text-slate-500" />
                                             {course.level}
                                         </Badge>
