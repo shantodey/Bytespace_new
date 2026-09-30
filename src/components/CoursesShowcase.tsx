@@ -86,17 +86,17 @@ export default function CoursesShowcase() {
         {/* Row 1: text left, boy + course card right */}
         <div className="grid lg:grid-cols-[1fr_auto] items-center gap-10">
           <div>
-            <h2 className="text-4xl font-semibold text-slate-900 leading-tight">
+            <h2 className="titles__font text-4xl font-semibold text-slate-900 leading-tight">
               Your Path to Professional <br /> Growth Starts Here!
             </h2>
-            <p className="mt-8 text-sm leading-7 text-slate-500 max-w-md">
+            <p className="mt-10 text-lg font-light secendery__font leading-7 text-slate-500 max-w-md">
               Explore our curated selection of courses tailored to enhance your capabilities and accelerate your career journey. Whether you are looking to sharpen specific skills, gain industry expertise, or embark on a new career path entirely, we have the resources you need.
             </p>
-            <div className="flex gap-8 mt-8">
+            <div className="flex gap-8 mt-10">
               {stats.map(([n, l]) => (
                 <div key={l}>
-                  <p className="text-3xl font-semibold text-blue-700">{n}</p>
-                  <p className="text-sm text-slate-500">{l}</p>
+                  <p className="text-4xl font-semibold titles__font  text-blue-700">{n}</p>
+                  <p className="text-lg secendery__font text-slate-500">{l}</p>
                 </div>
               ))}
             </div>
@@ -139,15 +139,15 @@ export default function CoursesShowcase() {
           </div>
 
           <div>
-            <h2 className="text-4xl font-semibold text-slate-900 leading-tight">
+            <h2 className="titles__font text-4xl font-semibold text-slate-900 leading-tight">
               Create &amp; Manage <br /> Courses Easily.
             </h2>
-            <p className="mt-6 text-sm leading-7 text-slate-500 max-w-md">
-              <b className="text-slate-800">ByteSpace</b> supports individuals or entities in the creation, publication, and administration of educational courses.
+            <p className="mt-6 text-sm leading-7 text-lg font-light secendery__font text-slate-500 max-w-md">
+              <b className="text-slate-800 font-bold">ByteSpace</b> supports individuals or entities in the creation, publication, and administration of educational courses.
             </p>
             <ul className="mt-6 space-y-3">
               {perks.map((p) => (
-                <li key={p} className="flex items-center gap-3 text-sm text-slate-700">
+                <li key={p} className="flex text-base font-medium secendery__font items-center gap-3  text-slate-700">
                   <CheckCircle2 className="w-5 h-5 fill-blue-600 text-white" /> {p}
                 </li>
               ))}
