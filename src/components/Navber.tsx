@@ -19,13 +19,13 @@ const Navber = () => {
     ];
 
     return (
-        <div className="w-full text-white font-sans antialiased">
-            <header className="sticky top-0 z-50 w-full bg-[#0642DC]">
+        <div className="w-full text-white font-sans fixed unic_background top-0 left-0 z-9999 antialiased">
+            <header className="sticky top-0 z-50 w-full ">
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16 sm:h-20">
                         <div className="flex items-center space-x-2 sm:space-x-3 cursor-pointer">
                             <Image src={logo} alt='logo' />
-                            <span className="text-xl sm:text-2xl font-bold tracking-tight text-white">
+                            <span className="text-xl titles__font sm:text-2xl font-bold tracking-tight text-white">
                                 ByteSpace
                             </span>
                         </div>
@@ -33,7 +33,7 @@ const Navber = () => {
 
                         <nav className="hidden md:flex items-center space-x-8 sm:space-x-10 text-sm font-normal text-white/90">
                             {navLinks.map((link) => (
-                                <Link key={link.label} href={link.href} className="hover:text-white transition-colors duration-150">
+                                <Link key={link.label} href={link.href} className="hover:text-white secendery__font transition-colors duration-150">
                                     {link.label}
                                 </Link>
                             ))}
@@ -42,7 +42,7 @@ const Navber = () => {
                         { }
                         <div className="hidden md:flex items-center space-x-6 text-sm">
                             {routeLinks.map((link) => (
-                                <Link key={link.label} href={link.href} className="text-white/90 hover:text-white transition-colors duration-150">
+                                <Link key={link.label} href={link.href} className="text-white secendery__font hover:text-white transition-colors duration-150">
                                     {link.label}
                                 </Link>
                             ))}
@@ -71,7 +71,7 @@ const Navber = () => {
                         <nav className="flex flex-col space-y-3 text-base">
                             {navLinks.map((link) => (
                                 <Link key={link.label} href={link.href} onClick={() => setIsMobileMenuOpen(false)}
-                                    className="text-white/90 hover:text-white py-1 border-b border-white/5">
+                                    className="text-white/90 secendery__font hover:text-white py-1 border-b border-white/5">
                                     {link.label}
                                 </Link>
                             ))}
