@@ -24,7 +24,7 @@ const avatars = [
 const stats = [["12K", "Students"], ["70+", "Courses"], ["16", "Creators"]];
 const perks = ["Share Your Expertise", "Monetize Your Passion", "Flexibility and Autonomy", "Build a Community"];
 
-const Avatars = ({ extra }) => (
+const Avatars = ({ extra }: { extra?: React.ReactNode }) => (
   <div className="flex items-center -space-x-2">
     {avatars.map((a, i) => (
       <Avatar key={i} className="w-6 h-6 border-2 border-white">
