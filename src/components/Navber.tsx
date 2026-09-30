@@ -1,5 +1,5 @@
 "use client"
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ShoppingBag, Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import logo from '@/app/Assets/logo.png'
@@ -7,6 +7,12 @@ import Link from 'next/link';
 
 
 const Navber = () => {
+    const [scrolled, setScrolled] = useState(false)
+    useEffect(() => {
+        const onScroll = () => setScrolled(scrollY > 0)
+        addEventListener('scroll', onScroll, { passive: true })
+        return () => removeEventListener('scroll', onScroll)
+    }, [])
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const navLinks = [
         { label: "Home", href: "#" },
@@ -19,8 +25,8 @@ const Navber = () => {
     ];
 
     return (
-        <div className="w-full text-white font-sans fixed unic_background top-0 left-0 z-9999 antialiased">
-            <header className="sticky top-0 z-50 w-full ">
+        <div className="w-full text-white font-sans  antialiased">
+            <header className={`fixed  top-0 z-50 w-full transition-colors duration-200 ${scrolled ? 'bg-[#0642dc]' : 'bg-transparent'}`}>
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16 sm:h-20">
                         <div className="flex items-center space-x-2 sm:space-x-3 cursor-pointer">
@@ -79,7 +85,7 @@ const Navber = () => {
 
                         <div className="pt-2 flex items-center space-x-6 text-sm border-t border-white/10">
                             {routeLinks.map((link) => (
-                                <Link key={link.label} href={link.href}  onClick={() => setIsMobileMenuOpen(false)} className="text-white/90 hover:text-white">
+                                <Link key={link.label} href={link.href} onClick={() => setIsMobileMenuOpen(false)} className="text-white/90 hover:text-white">
                                     {link.label}
                                 </Link>
                             ))}
