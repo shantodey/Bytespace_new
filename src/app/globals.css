@@ -1,7 +1,7 @@
+@import url('https://fonts.cdnfonts.com/css/satoshi');
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
-
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -124,20 +124,28 @@
     linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
   background-size: 120px 120px;
 }
-.titles__font{
+
+.titles__font {
   font-family: var(--font-poppins);
 }
-.primery_colour{
+
+.secendery__font {
+  font-family: 'Satoshi', sans-serif;
+
+}
+
+.primery_colour {
   background-color: #d4fb20
 }
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
-  html {
-    @apply font-sans;
-  }
+
+
 }
