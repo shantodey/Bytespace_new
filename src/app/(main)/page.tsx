@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navber from "@/components/Navber";
 import Sponsors from "@/components/Sponsors";
+import Testimonials from "@/components/Testimonials";
 
 
 const page = () => {
@@ -21,6 +22,7 @@ const page = () => {
                 <ExploreLearningPaths/>
                 <CoursesShowcase/>
                 <CreatorBanner/>
+                <Testimonials/>
             </main>
             <footer>
                 <Footer/>

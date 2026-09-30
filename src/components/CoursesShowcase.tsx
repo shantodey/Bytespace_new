@@ -43,13 +43,6 @@ const CourseCard = () => (
     <CardContent className="p-0 flex flex-col h-full justify-between">
       <div className="relative w-85.25 h-48.75 rounded-2xl overflow-hidden">
         <Image src={course.imageSrc} alt={course.title} fill className="object-cover" />
-        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-3 w-max">
-          {[course.lessons, course.duration, course.comments].map((t) => (
-            <Badge key={t} variant="secondary" className="bg-white/70 backdrop-blur-md text-slate-800 text-[10px] font-normal px-2.5 py-1 rounded-full border-none shadow-none">
-              {t}
-            </Badge>
-          ))}
-        </div>
       </div>
       <div className="flex flex-col gap-1 mt-3 px-1">
         <div className="flex items-center justify-between">
