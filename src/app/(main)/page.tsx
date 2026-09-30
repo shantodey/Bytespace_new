@@ -1,4 +1,7 @@
+import CoursesShowcase from "@/components/CoursesShowcase";
+import CreatorBanner from "@/components/CreatorBanner";
 import DiscoverYourSkills from "@/components/DiscoverYourSkills";
+import ExploreLearningPaths from "@/components/ExploreLearningPaths";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navber from "@/components/Navber";
@@ -15,6 +18,9 @@ const page = () => {
             <main>
                 <Sponsors/>
                 <DiscoverYourSkills/>
+                <ExploreLearningPaths/>
+                <CoursesShowcase/>
+                <CreatorBanner/>
             </main>
             <footer>
                 <Footer/>

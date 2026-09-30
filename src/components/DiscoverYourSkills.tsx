@@ -127,7 +127,7 @@ export default function DiscoverYourSkills() {
                         return (
                             <Badge key={category} variant="outline" onClick={() => setSelectedCategory(category)}
                                 className={`cursor-pointer px-4 py-2 rounded-full text-xs md:text-sm font-medium transition-all duration-200 border-none ${isSelected
-                                    ? "bg-[#ccff00] text-slate-900 hover:bg-[#b8e600]"
+                                    ? "primery_colour text-slate-900 hover:bg-[#b8e600]"
                                     : "bg-slate-100 text-slate-700 hover:bg-slate-200"
                                     }`}>
                                 {category}
@@ -145,12 +145,12 @@ export default function DiscoverYourSkills() {
             <section className="container mx-auto px-4 flex justify-center">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {coursesData.map((course) => (
-                        <Card key={course.id} className="w-[373px] h-[384px] rounded-3xl p-[16px] bg-white border border-slate-200 shadow-sm flex flex-col justify-between select-none">
+                        <Card key={course.id} className="w-93.25 h-96 rounded-3xl p-4 bg-white border border-slate-200 shadow-sm flex flex-col justify-between select-none">
                             <CardContent className="p-0 flex flex-col h-full justify-between">
-                                <div className="relative w-[341px] h-[195px] rounded-2xl overflow-hidden group">
+                                <div className="relative w-85.25 h-48.75 rounded-2xl overflow-hidden group">
                                     <Image src={course.imageSrc} alt={course.title} fill className="object-cover transition-transform duration-300 group-hover:scale-105" />
 
-                                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-[12px] w-max max-w-[90%]">
+                                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-3 w-max max-w-[90%]">
                                         <Badge variant="secondary" className="bg-white/70 backdrop-blur-md text-slate-800 text-[10px] font-normal px-2.5 py-1 rounded-full border-none shadow-none">
                                             {course.lessons}
                                         </Badge>
@@ -201,7 +201,7 @@ export default function DiscoverYourSkills() {
                                                     </AvatarFallback>
                                                 </Avatar>
                                             ))}
-                                            <div className="w-6 h-6 rounded-full bg-[#ccff00] border-2 border-white flex items-center justify-center text-[10px] font-bold text-slate-900 z-10">
+                                            <div className="w-6 h-6 rounded-full primery_colour border-2 border-white flex items-center justify-center text-[10px] font-bold text-slate-900 z-10">
                                                 26+
                                             </div>
                                         </div>
