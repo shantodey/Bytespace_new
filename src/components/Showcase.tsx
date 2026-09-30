@@ -132,7 +132,7 @@ export const HeroShowcase = ({
 }: HeroShowcaseProps) => {
   return (
     <section>
-      <h1 className="text-2xl sm:text-3xl titles__font font-bold">{title}</h1>
+      <h1 className="text-xl titles__font font-semibold">{title}</h1>
       <p className="mt-3 text-xs sm:text-sm text-blue-100/80 max-w-[380px] leading-relaxed">
         {description}
       </p>

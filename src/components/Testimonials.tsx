@@ -26,10 +26,10 @@ export default function Testimonials() {
     <section className="overflow-hidden" style={{ background: bg }}>
       <div className="max-w-7xl mx-auto px-16 py-24">
         <div className="grid lg:grid-cols-2 items-center gap-16">
-          <h2 className="text-5xl font-semibold text-black leading-tight">
+          <h2 className="text-5xl titles__font font-semibold text-black leading-tight">
             Discover What Our <br /> Community Is Saying
           </h2>
-          <p className="text-base leading-7 text-slate-600">
+          <p className="text-lg secendery__font leading-7 text-slate-600">
             At ByteSpace, our vibrant community of learners and creators is at the heart of what we do. Hear directly from those who have experienced the transformative journey of learning and creating on our platform. Explore testimonials that reflect the diverse perspectives of enthusiastic learners and accomplished creators.
           </p>
         </div>
@@ -42,9 +42,9 @@ export default function Testimonials() {
                   <AvatarImage src={avatars[i].src} />
                   <AvatarFallback>{avatars[i].fallback}</AvatarFallback>
                 </Avatar>
-                <h3 className="mt-6 text-lg font-semibold text-black">{r.name}</h3>
-                <p className="text-sm text-blue-700">{r.role}</p>
-                <p className="mt-6 text-base leading-7 text-slate-600">&quot;{r.text}&quot;</p>
+                <h3 className="mt-6 titles__font text-xl font-semibold text-black">{r.name}</h3>
+                <p className="text-lg font-light secendery__font text-blue-700">{r.role}</p>
+                <p className="mt-6 secendery__font text-base leading-7 text-slate-600">&quot;{r.text}&quot;</p>
               </CardContent>
             </Card>
           ))}

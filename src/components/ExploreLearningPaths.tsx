@@ -16,14 +16,12 @@ const LEARNING_PATHS = [
 export default function ExploreLearningPaths() {
   return (
     <section className="w-full bg-white py-16 px-4 md:px-8 flex flex-col items-center justify-center text-center">
-      <div className="max-w-7xl mx-auto flex flex-col items-center">
-        {/* Heading: 36px & 600 weight (font-semibold) */}
-        <h2 className="text-[36px] font-semibold tracking-tight text-slate-900 leading-tight">
+      <div className="container mx-auto flex flex-col items-center">
+        <h2 className="text-4xl titles__font font-semibold tracking-tight text-slate-900 leading-tight">
           Explore Diverse Learning Paths at Bytespace
         </h2>
 
-        {/* Subtitle */}
-        <p className="mt-3 text-sm md:text-base text-slate-500 max-w-3xl leading-relaxed">
+        <p className="secendery__font mt-4 text-lg md:text-base text-slate-500 max-w-4xl leading-relaxed">
           At Bytespace, we believe in empowering individuals through knowledge. Our
           diverse range of courses spans various fields, ensuring there's
           something for everyone. Unleash your potential and explore our carefully
@@ -43,7 +41,7 @@ export default function ExploreLearningPaths() {
                     </div>
 
                     {/* Category Title */}
-                    <span className="text-sm font-medium text-slate-800 group-hover:text-slate-950">
+                    <span className="secendery__font text-xl font-medium text-slate-800 group-hover:text-slate-950">
                       {item.title}
                     </span>
                   </CardContent>
