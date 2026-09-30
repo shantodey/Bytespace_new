@@ -14,19 +14,19 @@ const page = () => {
         <>
             <header className="unic_background" >
                 <Navber />
-                <Hero/>
+                <Hero />
             </header>
             <main>
-                <Sponsors/>
-                <DiscoverYourSkills/>
-                <ExploreLearningPaths/>
-                <CoursesShowcase/>
-                <CreatorBanner/>
-                <Testimonials/>
+                <Sponsors />
+                <DiscoverYourSkills />
+                <ExploreLearningPaths />
+                <CoursesShowcase />
+                <CreatorBanner />
+                <Testimonials />
             </main>
-            <footer>
-                <Footer/>
-            </footer>
+
+            <Footer />
+
         </>
     );
 };
