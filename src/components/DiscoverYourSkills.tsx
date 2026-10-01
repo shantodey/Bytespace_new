@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Star,Signal } from "lucide-react";
+import { Star, Signal } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -116,98 +116,97 @@ export default function DiscoverYourSkills() {
         <div className="w-full pb-20">
             <div className="container mx-auto">
 
-            <section className="w-full  py-16 px-4 md:px-8 flex flex-col items-center justify-center text-center">
-                <h1 className="text-5xl titles__font font-semibold md:text-5xl  tracking-tight text-slate-900 max-w-2xl leading-tight"> Discover Your Passion, <br /> Build Your Skills</h1>
+                <section className="w-full  py-16 px-4 md:px-8 flex flex-col items-center justify-center text-center">
+                    <h1 className="text-5xl titles__font font-semibold md:text-5xl  tracking-tight text-slate-900 max-w-2xl leading-tight"> Discover Your Passion, <br /> Build Your Skills</h1>
 
-                <p className="mt-4 text-lg secendery__font md:text-base text-slate-500 max-w-2xl leading-relaxed">
-                    At Bytespace Courses, we bring you closer to life-changing knowledge. Explore a variety of courses across different fields, from technology to the arts, and make a difference in your career and life.
-                </p>
+                    <p className="mt-4 text-lg secendery__font md:text-base text-slate-500 max-w-2xl leading-relaxed">
+                        At Bytespace Courses, we bring you closer to life-changing knowledge. Explore a variety of courses across different fields, from technology to the arts, and make a difference in your career and life.
+                    </p>
 
-                <div className="mt-10 flex flex-wrap justify-center gap-2.5 max-w-4xl">
-                    {categories.map((category) => {
-                        const isSelected = selectedCategory === category;
-                        return (
-                            <Badge key={category} variant="outline" onClick={() => setSelectedCategory(category)}
-                                className={`cursor-pointer secendery__font px-3  py-4 rounded-full text-xs md:text-sm font-medium transition-all duration-200 border-none 
+                    <div className="mt-10 flex flex-wrap justify-center gap-2.5 max-w-4xl">
+                        {categories.map((category) => {
+                            const isSelected = selectedCategory === category;
+                            return (
+                                <Badge key={category} variant="outline" onClick={() => setSelectedCategory(category)}
+                                    className={`cursor-pointer secendery__font px-3  py-4 rounded-full text-xs md:text-sm font-medium transition-all duration-200 border-none 
                                     ${isSelected
-                                    ? "primery_colour text-slate-900 hover:bg-[#b8e600]"
-                                    : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-                                    }`}>
-                                {category}
-                            </Badge>
-                        );
-                    })}
+                                            ? "primery_colour text-slate-900 hover:bg-[#b8e600]"
+                                            : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                                        }`}>
+                                    {category}
+                                </Badge>
+                            );
+                        })}
 
-                    <button className="px-3 py-2 text-xs md:text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors">
-                        + More
-                    </button>
-                </div>
-            </section>
+                        <button className="px-3 py-2 text-xs md:text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors">
+                            + More
+                        </button>
+                    </div>
+                </section>
 
-            {/* 2. Course Cards Grid Section */}
-            <section className="px-4 flex justify-center">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {coursesData.map((course) => (
-                        <Card key={course.id} className="w-93.25 h-96 rounded-3xl p-4 bg-white border border-slate-200 shadow-sm flex flex-col justify-between select-none">
-                            <CardContent className="p-0 flex flex-col h-full justify-between">
-                                <div className="relative w-85.25 h-48.75 rounded-2xl overflow-hidden group">
-                                    <Image src={course.imageSrc} alt={course.title} fill className="object-cover transition-transform duration-300 group-hover:scale-105" />
-
-                                </div>
-
-                                {/* Course Details */}
-                                <div className="flex flex-col gap-1 mt-3 px-1">
-                                    {/* Title & Rating */}
-                                    <div className="flex items-center justify-between">
-                                        <h3 className="font-semibold text-slate-900 text-xl line-clamp-1">
-                                            {course.title}
-                                        </h3>
-                                        <div className="flex items-center gap-1 text-slate-400 text-sm font-medium">
-                                            <span>{course.rating.toFixed(1)}</span>
-                                            <Star className="w-4 h-4 fill-slate-300 text-slate-300" />
-                                        </div>
+                {/* 2. Course Cards Grid Section */}
+                <section className="px-4 flex justify-center w-full">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-7xl mx-auto">
+                        {coursesData.map((course) => (
+                            <Card key={course.id} className="w-full sm:w-93.25 h-auto sm:h-96 rounded-3xl p-4 bg-white border border-slate-200 shadow-sm flex flex-col justify-between select-none mx-auto">
+                                <CardContent className="p-0 flex flex-col h-full justify-between w-full">
+                                    <div className="relative w-full sm:w-85.25 h-48 sm:h-48.75 rounded-2xl overflow-hidden group">
+                                        <Image src={course.imageSrc} alt={course.title} fill className="object-cover transition-transform duration-300 group-hover:scale-105" />
                                     </div>
 
-                                    <p className="text-xs text-slate-400 secendery__font font-normal">
-                                        by <span className="text-blue-600 font-normal text-xs">{course.author}</span>
-                                    </p>
-
-                                    {/* Level & Avatars */}
-                                    <div className="flex items-center gap-3 my-1">
-                                        <Badge variant="outline" className="bg-slate-100 font-medium text-slate-600 border-none secendery__font text-xs px-2.5 py-0.5 rounded-full flex items-center gap-1.5">
-                                            <Signal className="text-xl text-slate-500"/>
-                                            {course.level}
-                                        </Badge>
-
-                                        {/* Overlapping Avatars */}
-                                        <div className="flex items-center -space-x-2">
-                                            {avatars.slice(0, 4).map((avatar, index) => (
-                                                <Avatar key={index} className="w-6 h-6 border-2 border-white">
-                                                    <AvatarImage src={avatar.src} />
-                                                    <AvatarFallback className="text-[9px]">
-                                                        {avatar.fallback}
-                                                    </AvatarFallback>
-                                                </Avatar>
-                                            ))}
-                                            <div className="w-6 h-6 rounded-full primery_colour border-2 border-white flex items-center justify-center text-[10px] font-bold text-slate-900 z-10">
-                                                26+
+                                    {/* Course Details */}
+                                    <div className="flex flex-col gap-1 mt-3 px-1">
+                                        {/* Title & Rating */}
+                                        <div className="flex items-center justify-between">
+                                            <h3 className="font-semibold text-slate-900 text-xl line-clamp-1">
+                                                {course.title}
+                                            </h3>
+                                            <div className="flex items-center gap-1 text-slate-400 text-sm font-medium shrink-0">
+                                                <span>{course.rating.toFixed(1)}</span>
+                                                <Star className="w-4 h-4 fill-slate-300 text-slate-300" />
                                             </div>
                                         </div>
-                                    </div>
 
-                                    {/* Price */}
-                                    <div className="flex items-baseline gap-0.5">
-                                        <span className="titles__font font-semibold text-xl text-blue-600">
-                                            {course.price}
-                                        </span>
-                                        <span className="secendery__font text-xs font-normal text-slate-400">/{course.period}</span>
+                                        <p className="text-xs text-slate-400 secendery__font font-normal">
+                                            by <span className="text-blue-600 font-normal text-xs">{course.author}</span>
+                                        </p>
+
+                                        {/* Level & Avatars */}
+                                        <div className="flex items-center justify-between sm:justify-start gap-3 my-1">
+                                            <Badge variant="outline" className="bg-slate-100 font-medium text-slate-600 border-none secendery__font text-xs px-2.5 py-0.5 rounded-full flex items-center gap-1.5">
+                                                <Signal className="text-xl text-slate-500" />
+                                                {course.level}
+                                            </Badge>
+
+                                            {/* Overlapping Avatars */}
+                                            <div className="flex items-center -space-x-2">
+                                                {avatars.slice(0, 4).map((avatar, index) => (
+                                                    <Avatar key={index} className="w-6 h-6 border-2 border-white">
+                                                        <AvatarImage src={avatar.src} />
+                                                        <AvatarFallback className="text-[9px]">
+                                                            {avatar.fallback}
+                                                        </AvatarFallback>
+                                                    </Avatar>
+                                                ))}
+                                                <div className="w-6 h-6 rounded-full primery_colour border-2 border-white flex items-center justify-center text-[10px] font-bold text-slate-900 z-10">
+                                                    26+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Price */}
+                                        <div className="flex items-baseline gap-0.5 mt-1">
+                                            <span className="titles__font font-semibold text-xl text-blue-600">
+                                                {course.price}
+                                            </span>
+                                            <span className="secendery__font text-xs font-normal text-slate-400">/{course.period}</span>
+                                        </div>
                                     </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-                    ))}
-                </div>
-            </section>
+                                </CardContent>
+                            </Card>
+                        ))}
+                    </div>
+                </section>
             </div>
         </div>
     );
