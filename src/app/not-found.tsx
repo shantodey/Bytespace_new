@@ -24,8 +24,7 @@ const notfound = () => {
         </h2>
 
         <p className="mt-3 text-xs sm:text-sm text-blue-100/80 secendery__font font-light max-w-md">
-          Try to use a correct url or go back to homepage to start again
-        </p>
+          Try to use a correct url or go back to homepage to start again </p>
 
         <div className="mt-6 sm:mt-8">
           <Link href="/">
