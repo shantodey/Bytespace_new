@@ -34,21 +34,21 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="mt-16 flex justify-between gap-10">
-          {reviews.map((r, i) => (
-            <Card key={r.name} className="w-93.5 h-108 rounded-3xl border-none bg-white shadow-none">
-              <CardContent className="p-6">
-                <Avatar className="w-20 h-20">
-                  <AvatarImage src={avatars[i].src} />
-                  <AvatarFallback>{avatars[i].fallback}</AvatarFallback>
-                </Avatar>
-                <h3 className="mt-6 titles__font text-xl font-semibold text-black">{r.name}</h3>
-                <p className="text-lg font-light secendery__font text-blue-700">{r.role}</p>
-                <p className="mt-6 secendery__font text-base leading-7 text-slate-600">&quot;{r.text}&quot;</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:flex lg:justify-between gap-6 lg:gap-10 w-full">
+  {reviews.map((r, i) => (
+    <Card   key={r.name} className="w-full sm:w-auto lg:w-93.5 h-auto lg:h-108 rounded-3xl border-none bg-white shadow-none lg:shrink-0">
+      <CardContent className="p-6">
+        <Avatar className="w-20 h-20">
+          <AvatarImage src={avatars[i]?.src} />
+          <AvatarFallback>{avatars[i]?.fallback}</AvatarFallback>
+        </Avatar>
+        <h3 className="mt-6 titles__font text-xl font-semibold text-black">{r.name}</h3>
+        <p className="text-lg font-light secendery__font text-blue-700">{r.role}</p>
+        <p className="mt-6 secendery__font text-base leading-7 text-slate-600">&quot;{r.text}&quot;</p>
+      </CardContent>
+    </Card>
+  ))}
+</div>
       </div>
     </section>
   );
