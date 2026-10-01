@@ -24,7 +24,7 @@ const Hero = () => {
     ];
 
     return (
-        <section className="relative w-full text-white min-h-screen lg:h-screen lg:max-h-screen pt-16 sm:pt-20 md:pt-24 pb-0 overflow-hidden flex flex-col items-center justify-between">
+        <section className="relative w-full text-white min-h-screen lg:h-screen lg:max-h-screen pt-16 sm:pt-20 md:pt-24 pb-0 overflow-hidden ">
 
             {/* Top Left Lime Spiral */}
             <div className="hidden lg:block pointer-events-none select-none absolute left-[clamp(-112px,-8vw,-48px)] top-[10%] sm:top-[12%] md:top-[14%] lg:top-[14%] z-0">
@@ -38,12 +38,12 @@ const Hero = () => {
 
             {/* Bottom Left White Donut / Torus */}
             <div className="hidden lg:block pointer-events-none select-none absolute left-[clamp(-48px,30vw,19%)] bottom-[2%] sm:bottom-[3%] md:bottom-[4%] lg:bottom-[4%] z-40">
-                <Image src={White_Circle} alt="White ring shape" height={300} width={300} className="object-contain w-[clamp(90px,18vw,240px)] h-auto rotate-[15deg]" />
+                <Image src={White_Circle} alt="White ring shape" height={300} width={300} className="object-contain w-[clamp(90px,18vw,240px)] h-auto rotate-15" />
             </div>
 
             {/* Top Right Lime Cylinder */}
             <div className="hidden lg:block pointer-events-none select-none absolute right-[clamp(-42px,-1vw,-8px)] top-[7%] sm:top-[10%] md:top-[12%] lg:top-[12%] z-20">
-                <Image src={Color_cylinder} alt="Lime cylinder shape" height={260} width={260} className="object-contain w-[clamp(75px,16vw,200px)] h-auto rotate-[10deg]" priority />
+                <Image src={Color_cylinder} alt="Lime cylinder shape" height={260} width={260} className="object-contain w-[clamp(75px,16vw,200px)] h-auto rotate-10" priority />
             </div>
 
             {/* Middle Right White Cone */}
@@ -53,11 +53,11 @@ const Hero = () => {
 
             {/* Bottom Right Large White Spring */}
             <div className="hidden lg:block pointer-events-none select-none absolute right-[clamp(-32px,18vw,50%)] bottom-[2%] sm:bottom-[3%] md:bottom-[4%] lg:bottom-[4%] rotate-150 z-20">
-                <Image src={White_spring} alt="White spring shape" height={330} width={330} className="object-contain w-[clamp(80px,17vw,230px)] h-auto rotate-[25deg]" />
+                <Image src={White_spring} alt="White spring shape" height={330} width={330} className="object-contain w-[clamp(80px,17vw,230px)] h-auto rotate-25" />
             </div>
 
             {/* Top Heading & Search Section */}
-            <div className="text-center container mx-auto px-4 z-10 flex-1 flex flex-col justify-start lg:justify-between items-center w-full">
+            <div className="text-center container mx-auto  px-4 z-10 flex-1 flex flex-col justify-start lg:justify-between items-center w-full">
 
                 <div className="w-full">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-extrabold tracking-tight titles__font leading-[1.12] text-white drop-shadow-sm">
@@ -70,14 +70,11 @@ const Hero = () => {
                     </p>
 
                     {/* Search Bar */}
-                    <div className="mt-4 sm:mt-5 flex items-center bg-white rounded-full p-1.5 sm:p-2 w-full max-w-[340px] sm:max-w-md md:max-w-lg mx-auto shadow-2xl">
+                    <div className="mt-4 sm:mt-5 flex items-center bg-white rounded-full p-1.5 sm:p-2 w-full max-w-85 sm:max-w-md md:max-w-lg mx-auto shadow-2xl">
                         <div className="flex items-center pl-3 sm:pl-4 pr-2 text-gray-400 w-full min-w-0">
                             <Search className="w-4 h-4 sm:w-5 sm:h-5 mr-2 shrink-0 text-gray-400" />
 
-                            <Input
-                                type="search"
-                                placeholder="Course, topic, creator"
-                                className="border-none shadow-none focus-visible:ring-0 text-gray-800 placeholder:text-gray-400 text-xs sm:text-sm h-8 sm:h-9 p-0 bg-transparent min-w-0"
+                            <Input    type="search"    placeholder="Course, topic, creator"    className="border-none shadow-none focus-visible:ring-0 text-gray-800 placeholder:text-gray-400 text-xs sm:text-sm h-8 sm:h-9 p-0 bg-transparent min-w-0"
                             />
                         </div>
 
@@ -88,13 +85,13 @@ const Hero = () => {
                 </div>
 
                 {/* Hero Image Area */}
-                <div className="relative mt-6 sm:mt-8 md:mt-10 lg:mt-1 flex justify-center items-end w-full min-h-[clamp(360px,55vw,520px)]">
+                <div className="relative mt-4 sm:mt-6 md:mt-8 lg:mt-1 flex justify-center items-end w-full min-h-[clamp(280px,45vw,520px)]">
 
                     {/* Lime Arch */}
-                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[clamp(300px,65%,900px)] aspect-[2/1] bg-[#CBFC01] rounded-[50%_50%_0_0_/_100%_100%_0_0] z-0 pointer-events-none" />
+                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[clamp(260px,60%,900px)] aspect-2/1 bg-[#CBFC01] rounded-[50%_50%_0_0_/_100%_100%_0_0] z-0 pointer-events-none " />
 
                     {/* Central Hero Person Image */}
-                    <div className="relative z-10 w-[clamp(300px,60vw,700px)] aspect-[700/620] flex items-end justify-center pointer-events-none">
+                    <div className="relative z-10 w-[clamp(260px,55vw,700px)] aspect-700/620 flex items-end justify-center pointer-events-none">
                         <Image src={heroImg} alt="Student with laptop" fill priority className="object-contain object-bottom select-none" />
                     </div>
 
@@ -107,7 +104,7 @@ const Hero = () => {
                     </div>
 
                     {/* Card 2: Learning Progress */}
-                    <div className="absolute right-[0%] sm:right-[5%] md:right-[7%] lg:right-[30%] top-[29%] sm:top-[28%] md:top-[30%] lg:top-[30%] z-20 bg-white text-black rounded-xl sm:rounded-2xl p-2 sm:p-3.5 shadow-xl border border-gray-100 min-w-[105px] sm:min-w-[150px] md:min-w-[180px] text-left">
+                    <div className="absolute right-[0%] sm:right-[5%] md:right-[7%] lg:right-[30%] top-[29%] sm:top-[28%] md:top-[30%] lg:top-[30%] z-20 bg-white text-black rounded-xl sm:rounded-2xl p-2 sm:p-3.5 shadow-xl border border-gray-100 min-w-26.25 sm:min-w-37.5 md:min-w-45 text-left">
                         <p className="text-[8px] sm:text-xs font-semibold text-gray-500">Learning Progress</p>
 
                         <p className="text-lg sm:text-2xl lg:text-3xl font-extrabold text-gray-900 mt-0.5 titles__font">
